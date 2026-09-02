@@ -55,7 +55,7 @@ fi
 if "$IS64BIT"; then
     board="`getprop ro.board.platform`"
     case "$board" in
-        zuma* | "pineapple"  )
+        "pineapple"  )
             replaceSystemProps_VHPerf
             ;;
         "kona" | "kalama" | "shima" | "yupik" )
@@ -64,7 +64,7 @@ if "$IS64BIT"; then
         "sdm845" )
             replaceSystemProps_SDM845
             ;;
-        gs* )
+        gs* | zuma* )
             replaceSystemProps_Tensor
             ;;
         "sdm660" | "bengal" | "holi" )
